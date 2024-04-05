@@ -9,7 +9,7 @@ const AllPuppies = ({ puppies }) => {
           return (
             <>
               <Link to={`/PuppyDetails/${puppy.id}`}>
-                <li key={puppy.id}>{puppy.name}</li>
+                <p key={puppy.id}>{puppy.name}</p>
               </Link>
             </>
           )

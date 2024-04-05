@@ -7,9 +7,9 @@ const NavBar = () => {
       <button>
         <Link to='/'>Puppies</Link>
       </button>
-      <button>
+      {/* <button>
         <Link to='/PuppyDetails/:puppyId'>Puppy</Link>
-      </button>
+      </button> */}
     </>
   )
 }
