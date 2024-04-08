@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.imgOne {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+}

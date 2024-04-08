@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import AllPuppies from '../components/AllPuppies';
 import AddPuppy from '../components/AddPuppy';
+import PuppyDetails from './PuppyDetails';
 
 const PuppiesList = ({ API }) => {
   const [puppies, setPuppies] = useState([]);
@@ -27,7 +28,7 @@ const PuppiesList = ({ API }) => {
       {error && <p>{error}</p>}
       <AddPuppy API={API} getPuppies={getPuppies}/>
       <h1>Puppies</h1>
-      <AllPuppies puppies={puppies} API={API}/>
+      <AllPuppies puppies={puppies} API={API} getPuppies={getPuppies}/>
     </>
   )
 }

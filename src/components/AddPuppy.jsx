@@ -4,7 +4,8 @@ const AddPuppy = ({ API, getPuppies }) => {
   const [name, setName] = useState('');
   const [breed, setBreed] = useState('');
   const [img, setImg] = useState('');
-
+  
+  // console.log(`Puppies:`, getPuppies);
   const handleOnSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -16,14 +17,14 @@ const AddPuppy = ({ API, getPuppies }) => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            name ,
-            breed ,
-            img  
+            name,
+            breed,
+            img
           }),
         }
       );
       const result = await response.json();
-      console.log(result);
+      console.log(`Result:`, result);
       await getPuppies();
     } catch (err) {
       console.error(err);
@@ -32,8 +33,8 @@ const AddPuppy = ({ API, getPuppies }) => {
 
   return (
     <>
-      <h3>Add Puppy</h3>
-      <form onSubmit={handleOnSubmit}>
+      <h3>Add Your Puppy</h3>
+      <form onSubmit={(e) => {handleOnSubmit(e)}}>
       <label>Name:{' '} 
         <input placeholder='name' type="text" value={name}
           onChange={(e) => {setName(e.target.value);}}/>

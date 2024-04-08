@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
+import DeletePuppy from "../components/DeletePuppy";
 
 const PuppyDetails = ({ API }) => {
   const [puppy, setPuppy] = useState({});
@@ -27,7 +28,8 @@ const PuppyDetails = ({ API }) => {
     <>
       <h3>{puppy.name}</h3>
       <p>{puppy.breed}</p>
-      <img src={puppy.imageUrl} />
+      <img src={puppy.imageUrl} style={{height:'200px'}, {width: '200px'}} /><br/>
+      {/* <DeletePuppy API={API}/> */}
     </>
   )
 }
